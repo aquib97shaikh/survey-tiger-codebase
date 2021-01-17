@@ -1,0 +1,20 @@
+.create-survey .cs-dropdownitem{
+    padding:5px;
+}
+.create-survey .cs-dropdownitem:hover{
+    background-color: rgb(228,164,77);
+}
+.create-survey .multi-select .option-container {
+    margin: 10px 0;
+}
+.create-survey .multi-select {
+    padding:10px 0;
+}
+.create-survey .add-qts {
+    background-color: rgb(175,95,70);
+}
+
+.create-survey .qts-btn-container {
+    display: flex;
+    justify-content: flex-end;
+}

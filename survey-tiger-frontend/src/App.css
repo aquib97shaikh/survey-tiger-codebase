@@ -1,0 +1,22 @@
+.survey-option-container , .app {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  width: 100vw;
+  height: 100vh;
+
+  align-items: center;
+}
+.logo {
+  justify-self: center;
+  align-self: center;
+  width: 25em;
+}
+.survey-option-container .survey-btn {
+  background-color: rgb(175,95,70);
+  margin:10px;
+  width:300px;
+  padding:15px;
+  border :0px;
+  font-size: 1.3em;
+}

@@ -13,7 +13,9 @@
 .create-survey .add-qts {
     background-color: rgb(175,95,70);
 }
-
+.confirm-qts{
+    background-color: rgb(175,95,70);
+}
 .create-survey .qts-btn-container {
     display: flex;
     justify-content: flex-end;

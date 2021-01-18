@@ -36,8 +36,16 @@ function MultiSelect(props) {
         question,options,type:"Multi",questionId:props.questionId
     })
   }
+  const publish = (e)=>{
+    if(question.trim() !=="" && options.filter(i=>i.trim().length ===0).length===0){
+      props.addQuestion({
+          question,options,type:"Multi",questionId:props.questionId
+      });
+      props.publish();
+  }
+  }
   return (
-    <div className="multi-select">
+    <div className="multi-select" >
       <InputGroup>
         <InputGroupAddon addonType="prepend">
           <InputGroupText>?</InputGroupText>
@@ -47,7 +55,7 @@ function MultiSelect(props) {
       <div className="options">
         {options.map((i, idx) => {
           return (
-            <div className="option-container">
+            <div className="option-container" key={idx}>
               <InputGroup>
                 <Input
                   name={idx}
@@ -77,7 +85,7 @@ function MultiSelect(props) {
           );
         })}
 
-        {options.length === 4 ? (
+        {options.length >= 4 ? (
           props.question !== undefined ? (
             <div className="qts-btn-container">
               <Button className="add-qts" onClick={updateQuestion}>
@@ -90,7 +98,7 @@ function MultiSelect(props) {
               <Button className="add-qts" onClick={addQuestion}>
                 Add Question
               </Button>
-              <Button className="add-qts">Publish</Button>
+              <Button className="add-qts" onClick={publish}>Publish</Button>
             </div>
           )
         ) : null}
